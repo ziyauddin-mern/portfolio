@@ -83,7 +83,7 @@ const Layout = ({ children, envData }) => {
             onClick={() => setMobileMenu(!mobileMenu)}
           >
             {mobileMenu ? (
-              <i class="ri-close-line"></i>
+              <i className="ri-close-line"></i>
             ) : (
               <i className="ri-menu-line"></i>
             )}
