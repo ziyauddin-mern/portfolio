@@ -1,6 +1,5 @@
 import Portfolio from "@/components/Portfolio";
-
-const App = () => {
+const PortfolioRoute = () => {
   return <Portfolio />;
 };
-export default App;
+export default PortfolioRoute;

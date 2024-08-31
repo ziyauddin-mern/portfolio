@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+import Layout from "@/components/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -9,9 +10,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const envData = {
+    myName: process.env.REACT_APP_MY_NAME,
+    role: process.env.REACT_APP_MY_ROLE,
+    linkedIn: process.env.REACT_APP_LINKEDIN,
+    mobile: process.env.REACT_APP_MOBILE,
+    email: process.env.REACT_APP_EMAIL,
+    location: process.env.REACT_APP_LOCATION,
+    birth: process.env.REACT_APP_BIRTH,
+  };
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AntdRegistry>
+          <Layout envData={envData}>{children}</Layout>
+        </AntdRegistry>
+      </body>
     </html>
   );
 }
