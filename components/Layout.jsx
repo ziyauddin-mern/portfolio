@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -15,7 +16,7 @@ const Layout = ({ children, envData }) => {
   };
 
   useEffect(() => {
-    downloadPdf();
+    //downloadPdf();
     router.push("/portfolio");
   }, []);
 
@@ -115,13 +116,17 @@ const Layout = ({ children, envData }) => {
       <div className="xl:w-10/12 w-11/12  mx-auto 2xl:pt-[12%] flex xl:flex-row flex-col gap-8 pb-8">
         <div className="2xl:w-3/12 xl:w-4/12">
           <div className="bg-white pb-8 rounded-lg xl:sticky xl:top-[140px] px-8">
-            <div className="relative flex justify-center 2xl:pb-[45%]">
-              <img
-                src="/images/profile/pic-4.png"
-                alt="pic"
-                loading="lazy"
-                className="2xl:w-[75%] w-[250px] 2xl:mt-0 mt-8 mb-4 rounded-xl 2xl:absolute 2xl:top-[-125px]"
-              />
+            <div className="relative 2xl:pb-[45%] flex justify-center">
+              <div className="2xl:absolute 2xl:top-[-125px] 2xl:w-[75%] w-[250px]">
+                <Image
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                  src="/images/profile/pic-4.png"
+                  alt="pic"
+                  className="2xl:mt-0 mt-8 mb-4 rounded-xl "
+                />
+              </div>
             </div>
 
             <div className="flex flex-col items-center gap-2">
