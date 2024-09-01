@@ -13,7 +13,7 @@ const Contact = () => {
 
         <div className="bg-[#F8FBFB] px-8 py-16 rounded-lg mt-8">
           <h1 className="text-3xl text-gray-600 mb-4">
-            I'm always open to discussing produuct
+            I am always open to discussing produuct
           </h1>
           <h2 className="text-2xl font-bold">design work or partnerships.</h2>
 

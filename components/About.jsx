@@ -47,7 +47,7 @@ const About = () => {
         </div>
         <p className="flex flex-col gap-4 lg:w-10/12 py-6 text-gray-500">
           <span>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia,
+            I am Creative Director and UI/UX Designer from Sydney, Australia,
             working in web development and print media. I enjoy turning complex
             problems into simple, beautiful and intuitive designs.
           </span>
