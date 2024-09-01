@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import "remixicon/fonts/remixicon.css";
 
 const Layout = ({ children, envData }) => {
+  const test = "z";
   const router = useRouter();
   const downloadPdf = () => {
     const pdfUrl = "/pdf/resume.pdf";
@@ -16,9 +17,9 @@ const Layout = ({ children, envData }) => {
   };
 
   useEffect(() => {
-    //downloadPdf();
+    downloadPdf();
     router.push("/portfolio");
-  }, []);
+  }, [test]);
 
   const pathname = usePathname();
   const [mobileMenu, setMobileMenu] = useState(false);
