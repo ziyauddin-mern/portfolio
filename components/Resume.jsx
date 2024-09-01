@@ -1,4 +1,5 @@
 import { Progress } from "antd";
+import Image from "next/image";
 
 const Resume = ({ envData }) => {
   const contactDetails = [envData.mobile, envData.email, envData.location];
@@ -16,11 +17,12 @@ const Resume = ({ envData }) => {
             className="bg-[#00BFC3] rounded-full pr-3 pl-1 pt-1 w-[250px] h-[250px]"
             style={{ boxShadow: "6px 6px 5px 0px rgba(0,0,0,0.75)" }}
           >
-            <img
+            <Image
+              width={2048}
+              height={2048}
               src="/images/profile/pic-5.png"
               alt="pic-5"
               className="rounded-full rotate-[15deg]"
-              loading="lazy"
             />
           </div>
         </div>

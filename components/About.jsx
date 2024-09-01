@@ -1,7 +1,5 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
+import Image from "next/image";
 
 const About = () => {
   const abouts = [
@@ -43,7 +41,9 @@ const About = () => {
       <div className="lg:p-16 p-6">
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold">About</h1>
-          <img src="/images/line.jpg" alt="line" />
+          <div>
+            <Image width={211} height={15} src="/images/line.jpg" alt="line" />
+          </div>
         </div>
         <p className="flex flex-col gap-4 lg:w-10/12 py-6 text-gray-500">
           <span>
@@ -68,7 +68,7 @@ const About = () => {
               }}
             >
               <div className="h-fit">
-                <img src={item.icon} alt={item.icon} className="w-[40px]" />
+                <Image width={40} height={40} src={item.icon} alt={item.icon} />
               </div>
               <div className="flex-1">
                 <h1 className="text-xl font-semibold">{item.title}</h1>
@@ -86,7 +86,13 @@ const About = () => {
         <div className="py-8 flex lg:flex-row flex-col justify-around lg:items-start items-center lg:gap-4 gap-12">
           {clients.map((item, index) => (
             <div key={index}>
-              <img src={item} alt={item} />
+              <Image
+                layout="responsive"
+                width={100}
+                height={100}
+                src={item}
+                alt={item}
+              />
             </div>
           ))}
         </div>

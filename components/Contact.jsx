@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
+
 const Contact = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="lg:p-16 lg:pb-12 p-6">
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold">Contact</h1>
-          <img src="/images/line.jpg" alt="line" />
+          <Image width={211} height={15} src="/images/line.jpg" alt="line" />
         </div>
 
         <div className="bg-[#F8FBFB] px-8 py-16 rounded-lg mt-8">

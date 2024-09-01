@@ -1,21 +1,29 @@
 "use client";
 
+import Image from "next/image";
+
 const Portfolio = () => {
   const portfolios1 = [
     {
       src: "/images/portfolio/1.webp",
+      imgWidth: 310,
+      imgHeight: 166,
       techs: "Travel Landing , UX/UI",
       projectName: "Chul urina",
       bgColor: "#FFF4F4",
     },
     {
       src: "/images/portfolio/2.webp",
+      imgWidth: 310,
+      imgHeight: 266,
       techs: "Travel Landing , UX/UI",
       projectName: "Aura Dione",
       bgColor: "#EEF5FA",
     },
     {
       src: "/images/portfolio/3.webp",
+      imgWidth: 310,
+      imgHeight: 216,
       techs: "Travel Landing , UX/UI",
       projectName: "T-Shirt Design",
       bgColor: "#EEF5FA",
@@ -25,18 +33,24 @@ const Portfolio = () => {
   const portfolios2 = [
     {
       src: "/images/portfolio/4.webp",
+      imgWidth: 310,
+      imgHeight: 266,
       techs: "Travel Landing , UX/UI",
       projectName: "Packaging Box",
       bgColor: "#FFF4F4",
     },
     {
       src: "/images/portfolio/5.webp",
+      imgWidth: 310,
+      imgHeight: 216,
       techs: "Travel Landing , UX/UI",
       projectName: "Modern Bag Design",
       bgColor: "#FFF4F4",
     },
     {
       src: "/images/portfolio/6.webp",
+      imgWidth: 310,
+      imgHeight: 166,
       techs: "Travel Landing , UX/UI",
       projectName: "Chul urina",
       bgColor: "#EEF5FA",
@@ -48,7 +62,7 @@ const Portfolio = () => {
       <div className="lg:p-16 p-6">
         <div className="flex items-center gap-4">
           <h1 className="text-4xl font-bold">Portfolio</h1>
-          <img src="/images/line.jpg" alt="line" />
+          <Image width={211} height={15} src="/images/line.jpg" alt="line" />
         </div>
 
         <div className="flex gap-2 justify-between  mx-auto px-4">
@@ -60,7 +74,13 @@ const Portfolio = () => {
                     className="flex flex-col py-6 gap-3 px-6 items-center rounded-lg portfolio-box"
                     style={{ background: item.bgColor }}
                   >
-                    <img src={item.src} alt={item.src} className="rounded-lg" />
+                    <Image
+                      width={item.imgWidth}
+                      height={item.imgHeight}
+                      src={item.src}
+                      alt={item.src}
+                      className="rounded-lg"
+                    />
                     <div className="w-9/12 mt-3">
                       <p className="text-xs text-gray-500">{item.techs}</p>
                       <h1 className="text-base font-semibold text-gray-800">
@@ -81,7 +101,13 @@ const Portfolio = () => {
                     className="flex flex-col py-6 gap-3 px-6 items-center rounded-lg portfolio-box"
                     style={{ background: item.bgColor }}
                   >
-                    <img src={item.src} alt={item.src} className="rounded-lg" />
+                    <Image
+                      width={item.imgWidth}
+                      height={item.imgHeight}
+                      src={item.src}
+                      alt={item.src}
+                      className="rounded-lg"
+                    />
                     <div className="w-9/12 mt-3">
                       <p className="text-xs text-gray-500">{item.techs}</p>
                       <h1 className="text-base font-semibold text-gray-800">
