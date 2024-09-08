@@ -17,7 +17,7 @@ const Layout = ({ children, envData }) => {
   };
 
   useEffect(() => {
-    downloadPdf();
+    //downloadPdf();
     router.push("/portfolio");
   }, [test]);
 

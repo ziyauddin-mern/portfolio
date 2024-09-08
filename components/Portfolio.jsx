@@ -5,7 +5,7 @@ import Image from "next/image";
 const Portfolio = () => {
   const portfolios1 = [
     {
-      src: "/images/portfolio/1.webp",
+      src: "/images/portfolio/abcconsultants.in.png",
       imgWidth: 310,
       imgHeight: 166,
       techs: "Travel Landing , UX/UI",
@@ -13,7 +13,7 @@ const Portfolio = () => {
       bgColor: "#FFF4F4",
     },
     {
-      src: "/images/portfolio/2.webp",
+      src: "/images/portfolio/clovedental.in.png",
       imgWidth: 310,
       imgHeight: 266,
       techs: "Travel Landing , UX/UI",
@@ -21,7 +21,7 @@ const Portfolio = () => {
       bgColor: "#EEF5FA",
     },
     {
-      src: "/images/portfolio/3.webp",
+      src: "/images/portfolio/dlifeinteriors.com.png",
       imgWidth: 310,
       imgHeight: 216,
       techs: "Travel Landing , UX/UI",
@@ -32,7 +32,7 @@ const Portfolio = () => {
 
   const portfolios2 = [
     {
-      src: "/images/portfolio/4.webp",
+      src: "/images/portfolio/fishykart.in.png",
       imgWidth: 310,
       imgHeight: 266,
       techs: "Travel Landing , UX/UI",
@@ -40,7 +40,7 @@ const Portfolio = () => {
       bgColor: "#FFF4F4",
     },
     {
-      src: "/images/portfolio/5.webp",
+      src: "/images/portfolio/superprof.co.in.png",
       imgWidth: 310,
       imgHeight: 216,
       techs: "Travel Landing , UX/UI",
@@ -48,7 +48,7 @@ const Portfolio = () => {
       bgColor: "#FFF4F4",
     },
     {
-      src: "/images/portfolio/6.webp",
+      src: "/images/portfolio/winni.in.png",
       imgWidth: 310,
       imgHeight: 166,
       techs: "Travel Landing , UX/UI",
@@ -65,22 +65,25 @@ const Portfolio = () => {
           <Image width={211} height={15} src="/images/line.jpg" alt="line" />
         </div>
 
-        <div className="flex gap-2 justify-between  mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 py-8">
+        <div className="flex gap-8 justify-between mx-auto px-0">
+          <div className="grid grid-cols-1 gap-8 py-8 flex-1">
             {portfolios1.map((item, index) => (
               <div key={index}>
                 <div>
                   <div
-                    className="flex flex-col py-6 gap-3 px-6 items-center rounded-lg portfolio-box"
+                    className="flex flex-col py-6 gap-3 items-center rounded-lg portfolio-box border-2 border-black"
                     style={{ background: item.bgColor }}
                   >
-                    <Image
-                      width={item.imgWidth}
-                      height={item.imgHeight}
-                      src={item.src}
-                      alt={item.src}
-                      className="rounded-lg"
-                    />
+                    <div className="h-[300px] w-[300px] overflow-hidden border-2 border-black w-full flex justify-center">
+                      <Image
+                        layout="fill"
+                        objectFit="fit"
+                        src={item.src}
+                        alt={item.src}
+                        className="rounded-lg"
+                      />
+                    </div>
+
                     <div className="w-9/12 mt-3">
                       <p className="text-xs text-gray-500">{item.techs}</p>
                       <h1 className="text-base font-semibold text-gray-800">
@@ -93,7 +96,7 @@ const Portfolio = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-8 py-8">
+          <div className="grid grid-cols-1 gap-8 py-8 flex-1">
             {portfolios2.map((item, index) => (
               <div key={index}>
                 <div>
@@ -101,13 +104,16 @@ const Portfolio = () => {
                     className="flex flex-col py-6 gap-3 px-6 items-center rounded-lg portfolio-box"
                     style={{ background: item.bgColor }}
                   >
-                    <Image
-                      width={item.imgWidth}
-                      height={item.imgHeight}
-                      src={item.src}
-                      alt={item.src}
-                      className="rounded-lg"
-                    />
+                    <div className="h-[300px] overflow-hidden">
+                      <Image
+                        width={item.imgWidth}
+                        height={item.imgHeight}
+                        src={item.src}
+                        alt={item.src}
+                        className="rounded-lg"
+                      />
+                    </div>
+
                     <div className="w-9/12 mt-3">
                       <p className="text-xs text-gray-500">{item.techs}</p>
                       <h1 className="text-base font-semibold text-gray-800">

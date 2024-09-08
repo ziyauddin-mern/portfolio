@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.portfolio-box img {
+  transition: transform 2s ease;
+}
+
 .portfolio-box:hover img {
-  transform: scale(1.1);
-  transition: 0.6s;
+  transform: translateY(-80%);
 }
