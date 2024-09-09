@@ -11,8 +11,8 @@ const Resume = ({ envData }) => {
         backgroundSize: "100% 100%",
       }}
     >
-      <div className="grid lg:grid-cols-2 lg:gap-0 gap-4 lg:pt-0 pt-12 px-12">
-        <div className="lg:pt-16 lg:pl-16 flex lg:justify-start justify-center">
+      <div className="grid lg:grid-cols-2 lg:gap-0 gap-4 lg:pt-0 pt-12 px-8">
+        <div className="lg:pt-16 2xl:pl-12 flex lg:justify-start justify-center">
           <div
             className="bg-[#00BFC3] rounded-full pr-3 pl-1 pt-1 w-[250px] h-[250px]"
             style={{ boxShadow: "6px 6px 5px 0px rgba(0,0,0,0.75)" }}

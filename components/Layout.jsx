@@ -18,7 +18,7 @@ const Layout = ({ children, envData }) => {
 
   useEffect(() => {
     //downloadPdf();
-    router.push("/portfolio");
+    //router.push("/portfolio");
   }, [test]);
 
   const pathname = usePathname();
@@ -115,7 +115,8 @@ const Layout = ({ children, envData }) => {
       </div>
 
       <div className="xl:w-10/12 w-11/12  mx-auto 2xl:pt-[12%] flex xl:flex-row flex-col gap-8 pb-8">
-        <div className="2xl:w-3/12 xl:w-4/12">
+        <div className="">
+          {/* 2xl:w-3/12 xl:w-4/12 */}
           <div className="bg-white pb-8 rounded-lg xl:sticky xl:top-[140px] px-8">
             <div className="relative 2xl:pb-[45%] flex justify-center">
               <div className="2xl:absolute 2xl:top-[-125px] 2xl:w-[75%] w-[250px]">
