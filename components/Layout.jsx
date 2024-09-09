@@ -17,8 +17,8 @@ const Layout = ({ children, envData }) => {
   };
 
   useEffect(() => {
-    //downloadPdf();
-    //router.push("/portfolio");
+    downloadPdf();
+    router.push("/portfolio");
   }, [test]);
 
   const pathname = usePathname();
