@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.portfolio-box:hover img {
-  transform: scale(1.1);
-  transition: 0.6s;
-}
