@@ -1,8 +1,40 @@
 "use client";
 
+import { message } from "antd";
+import axios from "axios";
 import Image from "next/image";
+import { useState } from "react";
 
 const Contact = () => {
+  const [loding, setLoding] = useState(false);
+
+  const contact = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const values = {
+      fullname: form.fullname.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    setLoding(true);
+
+    try {
+      const { data } = await axios.post("/api/contact", values, {
+        "Content-Type": "application/json",
+      });
+
+      form.reset();
+      message.success(
+        "Thank you for visiting our website. We will get in touch with you shortly."
+      );
+    } catch (err) {
+      message.error(err.response.data.message || err.message);
+    } finally {
+      setLoding(false);
+    }
+  };
+
   return (
     <div className="bg-white rounded-xl">
       <div className="lg:p-16 lg:pb-12 p-6">
@@ -18,7 +50,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold">design work or partnerships.</h2>
 
           <div className="mt-8">
-            <form className="space-y-12">
+            <form className="space-y-12" onSubmit={contact}>
               <div className="flex flex-col">
                 <label>Name *</label>
                 <input
@@ -51,9 +83,21 @@ const Contact = () => {
               </div>
 
               <div className="">
-                <button className="border border-black px-8 py-3 rounded-lg hover:border-blue-500 hover:text-white hover:bg-blue-500 duration-300 font-semibold">
-                  Submit
-                </button>
+                {!loding && (
+                  <button className="border border-black px-8 py-3 rounded-lg hover:border-blue-500 hover:text-white hover:bg-blue-500 duration-300 font-semibold">
+                    Submit
+                  </button>
+                )}
+
+                {loding && (
+                  <button
+                    className="flex items-center gap-1 text-lg bg-gray-300 px-6 py-2 rounded"
+                    disabled
+                  >
+                    <sapn className="text-sm">wait </sapn>
+                    <i className="ri-loader-2-line block animate-spin"></i>
+                  </button>
+                )}
               </div>
             </form>
           </div>
