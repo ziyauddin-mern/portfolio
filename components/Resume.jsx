@@ -1,8 +1,45 @@
 import { Progress } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 
 const Resume = ({ envData }) => {
   const contactDetails = [envData.mobile, envData.email, envData.location];
+
+  const skills = [
+    "Reactjs",
+    "NextJS",
+    "NodeJS",
+    "Express",
+    "AWS Cloud",
+    "MongoDB",
+  ];
+
+  const projects = [
+    {
+      title: "Superprof",
+      link: "https://www.superprof.co.in/",
+    },
+    {
+      title: "FishyKart",
+      link: "https://fishykart.in/",
+    },
+    {
+      title: "Winni",
+      link: "https://www.winni.in/",
+    },
+    {
+      title: "ABC Consultants",
+      link: "https://www.abcconsultants.in/",
+    },
+    {
+      title: "Dlife Interiors",
+      link: "https://dlifeinteriors.com/",
+    },
+    {
+      title: "Clove Dental",
+      link: "https://clovedental.in/",
+    },
+  ];
 
   return (
     <div
@@ -57,66 +94,74 @@ const Resume = ({ envData }) => {
         <div className="lg:border-r-2 border-x-2 lg:border-l-0 lg:px-0 px-4 border-[#E1594F] space-y-8">
           <div className="flex gap-3 border-b-2 border-[#E1594F]">
             <div>
-              <button className="bg-[#E1574D] w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-user-fill"></i>
               </button>
             </div>
             <div>
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-2xl font-bold mt-1">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
                 About Me
               </button>
               <p className="text-sm text-gray-500 py-4 w-10/12 text-justify leading-relaxed">
-                Hello! I am Ziya. I am an experienced Full Stack Developer with
-                over 10 years of working experience in the IT industry. I mainly
-                work on Ecommerce Website design and Api Design.
+                Full-Stack MERN Developer with extensive experience in
+                JavaScript, React, Node.js, and MongoDB. Expert in designing and
+                developing scalable web applications, enhancing user experience,
+                and optimizing backend performance for high-traffic platforms.
               </p>
             </div>
           </div>
 
           <div className="flex gap-3 border-b-2 border-[#E1594F]">
             <div>
-              <button className="bg-[#E1574D] w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-suitcase-fill"></i>
               </button>
             </div>
             <div>
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-2xl font-bold mt-1">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
                 Education
               </button>
               <div className="space-y-1 my-4">
                 <h1 className="text-sm font-semibold flex items-center gap-1">
                   <i className="ri-circle-fill text-[8px]"></i>
-                  <span>Wap Institute</span>
+                  <span>Advance Diploma In Software Engineering</span>
                 </h1>
-                <p className="text-gray-400 text-sm">Front End Development</p>
+                <p className="text-gray-400 text-xs flex items-center justify-between pr-2">
+                  <span>Wap Institute</span>
+                  <span>[2018-2020]</span>
+                </p>
               </div>
 
-              <div className="space-y-1 my-4">
+              <div className="my-4">
                 <h1 className="text-sm font-semibold flex items-center gap-1">
                   <i className="ri-circle-fill text-[8px]"></i>
-                  <span>Wap Institute</span>
+                  <span>Class XII</span>
                 </h1>
-                <p className="text-gray-400 text-sm">Back End Development</p>
+                <p className="text-gray-400 text-xs flex justify-between pr-2">
+                  <span>Rajasthan Board</span>
+                  <span>[2015-16]</span>
+                </p>
               </div>
             </div>
           </div>
 
           <div className="flex gap-3 pb-4 ">
             <div>
-              <button className="bg-[#E1574D] w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-image-edit-fill"></i>
               </button>
             </div>
-            <div>
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-2xl font-bold mt-1">
+            <div className="w-full">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
                 Work Experience
               </button>
-              <div className="pt-4 space-y-1">
-                <h2 className="text-gray-500 text-sm">Borcelle Company</h2>
+              <div className="pt-4 space-y-1w-full">
                 <h1 className="text-sm font-bold text-gray-700">
-                  Creative Designer
+                  Full Stack Developer (4 Years+)
                 </h1>
-                <h3 className="text-xs text-gray-500">Oct 2020 - Present</h3>
+                <h3 className="text-sm text-gray-500">
+                  <span>Techsunset [2020-2024]</span>
+                </h3>
               </div>
             </div>
           </div>
@@ -125,85 +170,24 @@ const Resume = ({ envData }) => {
         <div className="border-x-2 lg:border-x-0 lg:px-0 px-4 border-[#E1594F] space-y-8">
           <div className="flex gap-3 border-b-2 border-[#E1594F] pl-8 pb-8">
             <div>
-              <button className="bg-[#E1574D] w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-settings-2-line"></i>
               </button>
             </div>
             <div className="w-full">
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-2xl font-bold mt-1">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
                 Skills
               </button>
               <div className="mt-4">
                 <h1 className="text-[#E1574D] font-bold">Expertise Skill</h1>
                 <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={80}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#027E84"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#E1574D"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#027E84"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#E1574D"
-                      />
-                    </div>
+                  <div className="grid grid-cols-1 gap-1 mt-2">
+                    {skills.map((item, index) => (
+                      <div key={index} className="flex gap-3 items-center">
+                        <i className="ri-circle-fill text-[6px]"></i>
+                        <span className="text-gray-400 text-sm">{item}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -211,73 +195,15 @@ const Resume = ({ envData }) => {
               <div className="mt-4">
                 <h1 className="text-[#E1574D] font-bold">Language Skill</h1>
                 <div className="pl-2">
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-1 mt-2 gap-2">
                     <div className="flex gap-3 items-center">
                       <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
+                      <span className="text-gray-400 text-sm">English</span>
                     </div>
-                    <div>
-                      <Progress
-                        percent={80}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#027E84"
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
                     <div className="flex gap-3 items-center">
                       <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#E1574D"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#027E84"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pl-2">
-                  <div className="grid grid-cols-2">
-                    <div className="flex gap-3 items-center">
-                      <i className="ri-circle-fill text-[6px]"></i>
-                      <span className="text-gray-400 text-sm">Logo Design</span>
-                    </div>
-                    <div>
-                      <Progress
-                        percent={90}
-                        size="small"
-                        status="active"
-                        showInfo={false}
-                        strokeColor="#E1574D"
-                      />
+                      <span className="text-gray-400 text-sm">Hindi</span>
                     </div>
                   </div>
                 </div>
@@ -287,36 +213,30 @@ const Resume = ({ envData }) => {
 
           <div className="flex gap-3 pl-8 pb-8 pt-12">
             <div>
-              <button className="bg-[#E1574D] w-12 h-12 rounded-full flex items-center justify-center text-white text-2xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-file-code-line"></i>
               </button>
             </div>
             <div className="w-full">
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-2xl font-bold mt-1">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
                 Project
               </button>
               <div className="mt-4">
-                <h1 className="text-[#E1574D] font-bold">Expertise Skill</h1>
-                <div className="pl-2">
-                  <div className="flex gap-3 items-center">
-                    <i className="ri-circle-fill text-[6px]"></i>
-                    <span className="text-gray-400 text-sm">Logo Design</span>
-                  </div>
-
-                  <div className="flex gap-3 items-center">
-                    <i className="ri-circle-fill text-[6px]"></i>
-                    <span className="text-gray-400 text-sm">Logo Design</span>
-                  </div>
-
-                  <div className="flex gap-3 items-center">
-                    <i className="ri-circle-fill text-[6px]"></i>
-                    <span className="text-gray-400 text-sm">Logo Design</span>
-                  </div>
-
-                  <div className="flex gap-3 items-center">
-                    <i className="ri-circle-fill text-[6px]"></i>
-                    <span className="text-gray-400 text-sm">Logo Design</span>
-                  </div>
+                <h1 className="text-[#E1574D] font-bold">Top Projects</h1>
+                <div className="pl-2 mt-2">
+                  {projects.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.link}
+                      className="text-gray-400  hover:text-blue-600 duration-300"
+                      target="_blank"
+                    >
+                      <div className="flex gap-3 items-center">
+                        <i className="ri-folder-open-fill"></i>
+                        <span className="text-sm">{item.title}</span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
