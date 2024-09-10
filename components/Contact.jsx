@@ -106,7 +106,7 @@ const Contact = () => {
 
       <div className="py-8 bg-[#F8FBFB]">
         <p className="text-center text-gray-500">
-          © 2024 All Rights Reserved by elite-themes24.
+          © 2024 All Rights Reserved by Ziyauddin.
         </p>
       </div>
     </div>

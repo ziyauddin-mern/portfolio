@@ -9,7 +9,7 @@ const Layout = ({ children, envData }) => {
   const test = "z";
   const router = useRouter();
   const downloadPdf = () => {
-    const pdfUrl = "/pdf/resume.pdf";
+    const pdfUrl = "/pdf/ziyauddin.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Ziyauddin.pdf";
@@ -17,8 +17,8 @@ const Layout = ({ children, envData }) => {
   };
 
   useEffect(() => {
-    downloadPdf();
-    router.push("/portfolio");
+    //downloadPdf();
+    //router.push("/portfolio");
   }, [test]);
 
   const pathname = usePathname();
@@ -54,11 +54,6 @@ const Layout = ({ children, envData }) => {
   ];
 
   const menus = [
-    {
-      icon: "ri-user-line",
-      label: "About",
-      href: "/about",
-    },
     {
       icon: "ri-article-line",
       label: "Resume",
