@@ -92,7 +92,27 @@ const Resume = ({ envData }) => {
 
       <div className="grid lg:grid-cols-2 lg:px-16 px-8 py-16">
         <div className="lg:border-r-2 border-x-2 lg:border-l-0 lg:px-0 px-4 border-[#E1594F] space-y-8">
-          <div className="flex gap-3 border-b-2 border-[#E1594F]">
+          <div className="flex gap-3 pb-4 border-b-2 border-[#E1594F]">
+            <div>
+              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
+                <i className="ri-image-edit-fill"></i>
+              </button>
+            </div>
+            <div className="w-full">
+              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
+                Work Experience
+              </button>
+              <div className="pt-4 space-y-1w-full">
+                <h1 className="text-sm font-bold text-gray-700">
+                  Full Stack Developer (4 Years+)
+                </h1>
+                <h3 className="text-sm text-gray-500">
+                  <span>Techsunset [2020-2024]</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className="flex gap-3 pb-4  border-b-2 border-[#E1594F]">
             <div>
               <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
                 <i className="ri-user-fill"></i>
@@ -141,27 +161,6 @@ const Resume = ({ envData }) => {
                   <span>Rajasthan Board</span>
                   <span>[2015-16]</span>
                 </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex gap-3 pb-4 ">
-            <div>
-              <button className="bg-[#E1574D] w-10 h-10 rounded-full flex items-center justify-center text-white text-xl hover:bg-[#FFDFDD] hover:text-black duration-200">
-                <i className="ri-image-edit-fill"></i>
-              </button>
-            </div>
-            <div className="w-full">
-              <button className="bg-[#FFDFDD] text-[#E1574D] px-4 rounded-lg py-1 text-xl font-bold mt-1">
-                Work Experience
-              </button>
-              <div className="pt-4 space-y-1w-full">
-                <h1 className="text-sm font-bold text-gray-700">
-                  Full Stack Developer (4 Years+)
-                </h1>
-                <h3 className="text-sm text-gray-500">
-                  <span>Techsunset [2020-2024]</span>
-                </h3>
               </div>
             </div>
           </div>
