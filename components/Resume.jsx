@@ -12,6 +12,8 @@ const Resume = ({ envData }) => {
     "Express",
     "AWS Cloud",
     "MongoDB",
+    "Docker",
+    "Redis",
   ];
 
   const projects = [
